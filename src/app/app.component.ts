@@ -14,7 +14,10 @@ import { Component } from '@angular/core';
         </li>           
         <li class="nav-item">
           <a class="nav-link" routerLink="Tester">Tester</a>
-        </li>   
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Tester">Logout</a>
+        </li>      
       </ul>    
     </div>
   </nav>

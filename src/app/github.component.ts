@@ -14,7 +14,9 @@ import { filter, debounceTime, distinctUntilChanged } from 'rxjs/operators'
           </div>
           <div *ngFor="let user of users" class="media">
             <div class="media"> 
-              <a href="{{ user.html_url }}" > 
+              <!-- <a href="{{ user.html_url }}" >  -->
+              <!-- <a [routerLink]="['user', user.login, user.score]"> -->
+              <a [routerLink]="['user', user.login, user.score]">
                 <img src="{{user.avatar_url}}" class = "mr-4" alt ="..." width ="64" height = "64"> 
               </a>
               <div class="media-body">

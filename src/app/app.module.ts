@@ -9,24 +9,35 @@ import { NotFoundComponent } from "./notfound.component"
 import { GitHubComponent } from "./github.component"
 import { routing } from "./app.routing"
 import { TesterComponent } from './another.component';
+import { GitHubUserComponent } from './githubuser.component';
+import { LoginComponent } from './login.component';
+import { LoginService } from './login.service';
+import { AuthGuard } from './auth-guard.service';
 
 
 @NgModule({
   declarations: [
+    GitHubUserComponent,
     AppComponent,
     HomeComponent,
     NotFoundComponent,
     GitHubComponent,
-    TesterComponent
-
+    TesterComponent,
+    LoginComponent
   ],
+
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     routing
   ],
-  providers: [],
+
+  providers: [
+    LoginService,
+    AuthGuard
+  ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

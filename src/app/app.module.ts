@@ -4,15 +4,27 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms'
+import { HomeComponent } from "./home.component"
+import { NotFoundComponent } from "./notfound.component"
+import { GitHubComponent } from "./github.component"
+import { routing } from "./app.routing"
+import { TesterComponent } from './another.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NotFoundComponent,
+    GitHubComponent,
+    TesterComponent
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

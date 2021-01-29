@@ -17,7 +17,7 @@ import { PreventUnsavedChangesGuard } from './prevent-unsaved-changes-guard.serv
 
 
 @NgModule({
-  declarations: [
+  declarations: [  // FOR components we use
     GitHubUserComponent,
     AppComponent,
     HomeComponent,
@@ -27,19 +27,19 @@ import { PreventUnsavedChangesGuard } from './prevent-unsaved-changes-guard.serv
     LoginComponent
   ],
 
-  imports: [
+  imports: [    // modules we use
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     routing
   ],
 
-  providers: [
+  providers: [    // services we use
     LoginService,
     AuthGuard,
     PreventUnsavedChangesGuard
   ],
 
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent]   // the ENTRY module of the APP.
 })
 export class AppModule { }

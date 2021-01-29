@@ -13,6 +13,7 @@ import { GitHubUserComponent } from './githubuser.component';
 import { LoginComponent } from './login.component';
 import { LoginService } from './login.service';
 import { AuthGuard } from './auth-guard.service';
+import { PreventUnsavedChangesGuard } from './prevent-unsaved-changes-guard.service';
 
 
 @NgModule({
@@ -35,9 +36,10 @@ import { AuthGuard } from './auth-guard.service';
 
   providers: [
     LoginService,
-    AuthGuard
+    AuthGuard,
+    PreventUnsavedChangesGuard
   ],
-  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,6 +9,7 @@ import { GitHubUserComponent } from './githubuser.component'
 
 import {LoginComponent} from './login.component'
 import {AuthGuard} from './auth-guard.service'
+import { LoginService } from "./login.service"
 
 export const routing = RouterModule.forRoot([
     {path:'', component: HomeComponent},
@@ -17,6 +18,6 @@ export const routing = RouterModule.forRoot([
     {path:'Tester/user/:login/:score', component: GitHubUserComponent, canActivate:[AuthGuard]},
     {path:'GitHub/user/:login/:score', component: GitHubUserComponent, canActivate:[AuthGuard]},
     {path:'login', component: LoginComponent},
-    {path:'logout', component: LoginComponent},
+    {path:'logout', component: HomeComponent},
     {path:'**', component: NotFoundComponent}
 ])

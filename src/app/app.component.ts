@@ -1,6 +1,9 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component } from '@angular/core';
+import { LoginService} from './login.service'
 
 @Component({
+
   selector: 'app-root',
   template: `  
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,7 +19,7 @@ import { Component } from '@angular/core';
           <a class="nav-link" routerLink="Tester">Tester</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="Tester">Logout</a>
+          <a (click)="logout()" class="nav-link" routerLink="">Logout</a>
         </li>      
       </ul>    
     </div>
@@ -29,8 +32,12 @@ import { Component } from '@angular/core';
 
 })
 export class AppComponent {
-  constructor() {
+  constructor(private _loginService: LoginService) {
 
+  }
+
+  logout(){
+    this._loginService.logout();
   }
 
 }
